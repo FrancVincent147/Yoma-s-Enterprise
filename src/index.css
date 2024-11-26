@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply text-gray-800 bg-gray-50 antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-wine-800 font-semibold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand-orange text-white px-6 py-3 rounded-lg hover:bg-brand-orangeDark 
+           transition-colors text-lg font-medium shadow-md active:transform active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-wine-600 text-white px-6 py-3 rounded-lg hover:bg-wine-700 
+           transition-colors text-lg font-medium shadow-md active:transform active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg 
+           focus:ring-2 focus:ring-brand-orange focus:border-transparent text-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card hover:shadow-card-hover transition-shadow duration-300;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-wine-800 mb-8 text-center;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom Scrollbar */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-wine-300 rounded-full hover:bg-wine-400 transition-colors;
+  }
+}
